@@ -1,17 +1,28 @@
 import styles from "../Hero/Hero.module.scss";
-import Image from "next/image";
+import imgStyles from "./ImageWrapper.module.scss";
+import { GiDiamondRing } from "react-icons/gi";
 
 const Hero = () => {
   return (
     <header>
       <div className={styles.conteiner}>
+        <div className={styles.ring_conteiner}>
+          <h1 className={styles.ring_title}>
+            Y<span className={styles.unVisible}>O</span>UR
+            <GiDiamondRing className={styles.ring_img} />
+          </h1>
+          <p className={styles.ring_text}>perfect</p>
+          <h3 className={styles.ring_text_title}> wedding</h3>
+        </div>
         <h1 className={styles.hero_title}>Воплоти мрії у реальність</h1>
-        <div className={styles.lastik_wrapper}>
-          <div className={styles.lastik}></div>
+        <div className={imgStyles.lastik_wrapper}>
+          <div className={imgStyles.lastik}></div>
           <p className={styles.hero_text}>Створи свою уникальну свадьбу</p>
         </div>
-        <div className={styles.image_wrapper}>
-          {/* <Image src="/girls_mobile.jpg" alt="girls" width={359} height={190} /> */}
+        <div className={imgStyles.image_wrapper}>
+          <div className={imgStyles.conteiner_img_right}></div>
+          <div className={imgStyles.conteiner_img_center}></div>
+          <div className={imgStyles.conteiner_img_left}></div>
         </div>
         <button className={styles.hero_button} type="button">
           Замовити консультацію
