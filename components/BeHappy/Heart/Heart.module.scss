@@ -1,0 +1,100 @@
+.conteiner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 65px;
+}
+
+.first_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 59px;
+    margin-bottom: 12px;
+
+}
+
+.first_row_left {
+    display: flex;
+    grid-gap: 13px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
+
+.first_row_right {
+    display: flex;
+    grid-gap: 13px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
+
+
+.second_row {
+    display: flex;
+    grid-gap: 12px;
+    margin-bottom: 12px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
+
+
+.third_row {
+    display: flex;
+    grid-gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
+
+
+.four_row {
+    display: flex;
+    grid-gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
+
+.five_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+        &:hover {
+            cursor: pointer;
+            scale: 1.05;
+        }
+    }
+}
