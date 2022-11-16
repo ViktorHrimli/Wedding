@@ -25,6 +25,11 @@
     background: #239FDB;
     border-radius: 50%;
 
+    @media screen and (min-width: 768px) {
+        width: 44px;
+        height: 44px;
+    }
+
     &:hover {
         box-shadow: 0px 4px 15px 5px #239FDB;
     }
@@ -39,6 +44,11 @@
     border-radius: 50%;
     background: #1877F2;
 
+    @media screen and (min-width: 768px) {
+        width: 44px;
+        height: 44px;
+    }
+
     &:hover {
         box-shadow: 0px 4px 15px 5px #1877F2;
     }
@@ -48,12 +58,22 @@
     width: 20px;
     height: 20px;
     fill: white;
+
+    @media screen and (min-width: 768px) {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 .react_icons_facebook {
     width: 23px;
     height: 28px;
     fill: white;
+
+    @media screen and (min-width: 768px) {
+        width: 33px;
+        height: 30px;
+    }
 }
 
 .telephone {
@@ -64,6 +84,11 @@
     height: 32px;
     background: #7B80CF;
     border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+        width: 44px;
+        height: 44px;
+    }
 
     &:hover {
         box-shadow: 0px 4px 15px 5px rgba(114, 81, 167, 0.92375);
@@ -79,6 +104,11 @@
     justify-content: center;
     background: conic-gradient(from 180deg at 50% 50%, #CC25BB -43.13deg, #E19421 35.62deg, rgba(219, 62, 175, 0.94) 138.75deg, rgba(114, 81, 167, 0.92375) 185.62deg, #CC25BB 316.87deg, #E19421 395.63deg);
     border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+        width: 44px;
+        height: 44px;
+    }
 
     &:hover {
         box-shadow: 0px 4px 15px 5px rgba(114, 81, 167, 0.92375);
@@ -97,6 +127,13 @@
     left: -90px;
     color: #7B80CF;
     text-shadow: 0px 2px 6px rgba(152, 154, 218, 0.25);
+
+    @media screen and (min-width: 768px) {
+        top: 16px;
+        left: -140px;
+        font-size: 36px;
+        line-height: 51px;
+    }
 }
 
 .vektor_text {

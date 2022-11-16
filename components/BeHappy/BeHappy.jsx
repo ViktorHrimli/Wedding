@@ -4,7 +4,7 @@ import styles from "./BeHappy.module.scss";
 const Happy = () => {
   return (
     <div className={styles.container}>
-      <h1>Наши счастливые</h1>
+      <h1 className={styles.happy_title}>Наши счастливые</h1>
       <p className={styles.happy_text}>Stories</p>
       <Heart />
       <div className={styles.happy_div_text}>
