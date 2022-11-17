@@ -16,7 +16,14 @@
         height: 32px;
     }
 
-    @media screen and (min-width: 1268px) {}
+    @media screen and (min-width: 1600px) {
+        border-radius: 2px;
+        top: -50px;
+        left: 24px;
+        width: 45px;
+        height: 66px;
+
+    }
 }
 
 .lastik_wrapper {
@@ -26,25 +33,38 @@
     height: 86px;
     padding: 12px 0 12px 5px;
     margin-left: auto;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(240, 233, 249, 0.5);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
     margin-right: 4%;
     margin-top: 10%;
     margin-bottom: 15px;
+    border-radius: 15px;
 
     @media screen and (min-width: 768px) {
         width: 214px;
         height: 112px;
-        border-radius: 15px;
     }
 
-    @media screen and (min-width: 1268px) {}
+    @media screen and (min-width: 1600px) {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        top: 75px;
+        right: 0;
+        height: 130px;
+        width: 288px;
+
+        transform: matrix(0.98, 0.16, -0.19, 0.99, 0, 0);
+        padding: 25px;
+    }
 }
 
 .image_wrapper {
+    position: relative;
     display: block;
-    width: 100%;
-    height: 41%;
+    width: 360px;
+    height: 160px;
     background-image: url(../../public/girls_mobile.jpg);
     background-position: center;
     background-size: cover;
@@ -57,29 +77,57 @@
         height: 100%;
     }
 
-    @media screen and (min-width: 1268px) {}
+    @media screen and (min-width: 1600px) {
+        position: absolute;
+        top: 90px;
+        left: 28px;
+        width: 380px;
+        height: 350px;
+        background-color: rgb(245, 222, 179, 0.36);
+        border-radius: 50%;
+
+        &::after {
+            position: absolute;
+            display: inline-flex;
+            content: '';
+            top: 38px;
+            left: 18px;
+            width: 45px;
+            height: 66px;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            transform: matrix(0.96, -0.24, 0.28, 0.97, 0, 0);
+
+        }
+    }
 }
 
 .conteiner_img_right {
-    @media screen and (max-width:767px) {
-        display: none;
-    }
-
     position: absolute;
     width: 120px;
     height: 121px;
     top: 36px;
     right: 12px;
-    background-image: url(../../img/girls_tab.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url(../../img/girls_tab.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-color: rgb(245, 222, 179, 0.36);
+    border-radius: 50%;
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
 }
 
 .conteiner_img_center {
     position: absolute;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 
@@ -87,10 +135,16 @@
     height: 92px;
     top: 0px;
     right: 205px;
-    background-image: url(../../img/girs_tab2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url(../../img/girs_tab2.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-color: rgb(245, 222, 179, 0.36);
+    border-radius: 50%;
+
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
 }
 
 .conteiner_img_left {
@@ -103,8 +157,14 @@
     height: 203px;
     top: -170px;
     right: 387px;
-    background-image: url(../../img/tab_girs3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url(../../img/tab_girs3.jpg);
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-color: rgb(245, 222, 179, 0.36);
+    border-radius: 50%;
+
+    @media screen and (min-width: 1600px) {
+        display: none;
+    }
 }

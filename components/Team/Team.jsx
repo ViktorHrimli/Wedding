@@ -5,9 +5,7 @@ const Team = () => {
   return (
     <div className={styled.conteiner}>
       <div>
-        <h1 className={styled.team_title}>
-          Наши Координаторы <span></span>
-        </h1>
+        <h1 className={styled.team_title}>Наши Координаторы</h1>
         <p className={styled.team_text}>волшебники</p>
       </div>
       <TeamList />

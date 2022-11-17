@@ -3,18 +3,26 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 25% 3%;
+    align-items: center;
+    justify-content: center;
+    padding: 85px 3%;
 
     @media screen and (min-width: 768px) {
-        padding: 20% 4%;
+        padding: 103px 4%;
     }
 
+    @media screen and (min-width: 1600px) {
+        width: 1390px;
+    }
 }
 
 .team_title {
     position: relative;
+    display: inline;
 
-    span {
+    &::after {
+        display: block;
+        content: '';
         position: absolute;
         width: 12px;
         height: 12px;
@@ -32,12 +40,23 @@
             left: 169px;
         }
 
+        @media screen and (min-width: 1390px) {
+            top: 36px;
+            left: 421px;
+        }
     }
+
+
 
     @media screen and (min-width: 768px) {
         font-size: 36px;
         line-height: 42px;
         letter-spacing: 0.15em;
+    }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 48px;
+        line-height: 56px;
     }
 
 }
@@ -54,4 +73,10 @@
         line-height: 30px;
         letter-spacing: 0.12em;
     }
+
+    @media screen and (min-width: 1600px) {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
 }
