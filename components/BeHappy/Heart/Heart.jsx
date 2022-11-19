@@ -2,12 +2,28 @@ import styles from "./Heart.module.scss";
 import Image from "next/image";
 
 const Heart = () => {
+  const onClickImg = (event) => {
+    console.log(event.currentTarget.name);
+  };
   return (
     <div className={styles.conteiner}>
       <div className={styles.first_row}>
         <div className={styles.first_row_left}>
-          <Image src="/2_left.jpg" width={36} height={36} alt="merried" />
-          <Image src="/5_left.jpg" width={36} height={36} alt="merried" />
+          <Image
+            onClick={onClickImg}
+            src="/2_left.jpg"
+            name="watawt"
+            width={36}
+            height={36}
+            alt="merried"
+          />
+          <Image
+            onClick={onClickImg}
+            src="/5_left.jpg"
+            width={36}
+            height={36}
+            alt="merried"
+          />
         </div>
         <div className={styles.first_row_right}>
           <Image src="/5_right.jpg" width={36} height={36} alt="merried" />

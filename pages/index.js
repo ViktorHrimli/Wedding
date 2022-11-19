@@ -4,16 +4,23 @@ import About from "../components/About/About";
 import Team from "../components/Team/Team";
 import Happy from "../components/BeHappy/BeHappy";
 import Footer from "../components/Footer/Footer";
+import Modal from "../components/modal/Modal";
 import Head from "next/head";
+import { useState } from "react";
 
 const Home = () => {
+  const [isShow, setIsShow] = useState(false);
+  const handleClick = () => {
+    setIsShow(true);
+  };
   return (
     <div className={styles.conteiner}>
       <Head>
         <title>ForWeding</title>
       </Head>
       <div className={styles.wrapper_comp}>
-        <Hero />
+        {isShow && <Modal toggle={setIsShow} />}
+        <Hero click={handleClick} />
         <About />
         <Team />
         <Happy />

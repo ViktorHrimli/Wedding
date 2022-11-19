@@ -2,7 +2,7 @@ import styles from "../Hero/Hero.module.scss";
 import imgStyles from "./ImageWrapper.module.scss";
 import { GiDiamondRing } from "react-icons/gi";
 
-const Hero = () => {
+const Hero = ({ click }) => {
   return (
     <header>
       <div className={styles.conteiner}>
@@ -24,7 +24,7 @@ const Hero = () => {
           <div className={imgStyles.conteiner_img_center}></div>
           <div className={imgStyles.conteiner_img_left}></div>
         </div>
-        <button className={styles.hero_button} type="button">
+        <button className={styles.hero_button} onClick={click} type="button">
           Замовити консультацію
         </button>
       </div>

@@ -5,7 +5,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 85px 3%;
+    padding: 85px 0;
+
+    @media screen and (min-width: 450px) {
+        padding: 85px 3%;
+    }
+
 
     @media screen and (min-width: 768px) {
         padding: 103px 4%;
@@ -20,6 +25,7 @@
     position: relative;
     display: inline;
 
+
     &::after {
         display: block;
         content: '';
@@ -27,7 +33,7 @@
         width: 12px;
         height: 12px;
         top: 24px;
-        left: 90px;
+        left: 85px;
         background-image: url(../../public/V.jpg);
         background-position: center;
         background-size: cover;
@@ -37,15 +43,20 @@
             width: 17px;
             height: 18px;
             top: 38px;
-            left: 169px;
+            left: 133px;
         }
 
         @media screen and (min-width: 1390px) {
             top: 36px;
-            left: 421px;
+            left: 132px;
         }
     }
 
+    @media screen and (max-width: 450px) {
+        font-size: 22px;
+        line-height: 36px;
+        letter-spacing: 0.15em;
+    }
 
 
     @media screen and (min-width: 768px) {
