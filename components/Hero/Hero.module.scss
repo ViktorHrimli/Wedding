@@ -39,26 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    top: -220px;
-    left: 70px;
-
-    @media screen and (min-width: 500px) {
-
-        top: -220px;
-        left: 95px;
-    }
-
-
-
-    @media screen and (min-width: 768px) {
-        top: -229px;
-        left: 205px;
-    }
-
-    @media screen and (min-width: 1600px) {
-        top: -203px;
-        left: 595px;
-    }
+    top: -43%;
 }
 
 .ring_title {
