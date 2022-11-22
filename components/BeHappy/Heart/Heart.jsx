@@ -1,7 +1,5 @@
 import styles from "./Heart.module.scss";
 import Image from "next/image";
-import { ModalImg } from "./modalImg";
-import { useState, useEffect } from "react";
 
 const Heart = ({ click }) => {
   return (
