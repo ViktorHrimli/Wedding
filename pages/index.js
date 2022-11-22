@@ -6,7 +6,7 @@ import Happy from "../components/BeHappy/BeHappy";
 import Footer from "../components/Footer/Footer";
 import Modal from "../components/modal/Modal";
 import Head from "next/head";
-import { ModalImg } from "../components/Modal_Img/ModalImg";
+import ModalImg from "../components/Modal_Img/ModalImg";
 import { useState } from "react";
 
 const Home = () => {

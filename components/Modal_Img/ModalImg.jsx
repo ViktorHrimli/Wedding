@@ -29,4 +29,4 @@ const ModalImg = ({ toggle }) => {
   );
 };
 
-export { ModalImg };
+export default ModalImg;
