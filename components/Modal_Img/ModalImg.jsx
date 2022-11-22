@@ -1,4 +1,4 @@
-import styled from "./Modalimg.module.scss";
+import styled from "./ModalImg.module.scss";
 import { useEffect } from "react";
 
 const ModalImg = ({ toggle }) => {
