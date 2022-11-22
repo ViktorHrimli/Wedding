@@ -6,12 +6,19 @@ import Happy from "../components/BeHappy/BeHappy";
 import Footer from "../components/Footer/Footer";
 import Modal from "../components/modal/Modal";
 import Head from "next/head";
+import { ModalImg } from "../components/BeHappy/Heart/modalImg";
 import { useState } from "react";
 
 const Home = () => {
   const [isShow, setIsShow] = useState(false);
+  const [isShowImg, setIsShowImg] = useState(false);
+
   const handleClick = () => {
     setIsShow(true);
+  };
+
+  const handleClickImg = () => {
+    setIsShowImg(true);
   };
   return (
     <div className={styles.conteiner}>
@@ -20,10 +27,11 @@ const Home = () => {
       </Head>
       <div className={styles.wrapper_comp}>
         {isShow && <Modal toggle={setIsShow} />}
+        {isShowImg && <ModalImg toggle={setIsShowImg} />}
         <Hero click={handleClick} />
         <About />
         <Team />
-        <Happy />
+        <Happy click={handleClickImg} />
         <Footer />
       </div>
     </div>

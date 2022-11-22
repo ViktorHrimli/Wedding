@@ -1,16 +1,15 @@
 import styles from "./Heart.module.scss";
 import Image from "next/image";
+import { ModalImg } from "./modalImg";
+import { useState, useEffect } from "react";
 
-const Heart = () => {
-  const onClickImg = (event) => {
-    console.log(event.currentTarget.name);
-  };
+const Heart = ({ click }) => {
   return (
     <div className={styles.conteiner}>
       <div className={styles.first_row}>
         <div className={styles.first_row_left}>
           <Image
-            onClick={onClickImg}
+            onClick={click}
             src="/2_left.jpg"
             name="watawt"
             width={36}
@@ -18,7 +17,7 @@ const Heart = () => {
             alt="merried"
           />
           <Image
-            onClick={onClickImg}
+            onClick={click}
             src="/5_left.jpg"
             width={36}
             height={36}

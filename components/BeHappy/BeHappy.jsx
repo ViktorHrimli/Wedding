@@ -1,12 +1,12 @@
 import Heart from "./Heart/Heart";
 import styles from "./BeHappy.module.scss";
 
-const Happy = () => {
+const Happy = ({ click }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.happy_title}>Наши счастливые</h1>
       <p className={styles.happy_text}>Stories</p>
-      <Heart />
+      <Heart click={click} />
       <div className={styles.happy_div_text}>
         <div className={styles.happy_lastick_conteiner}></div>
         <p>

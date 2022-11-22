@@ -1,0 +1,50 @@
+.backdrop {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition: transform 250ms;
+    transition: opacity 250ms, visibility 250ms;
+    background-color: hsl(266, 57%, 95%, 0.7);
+    z-index: 2;
+
+    transition: all 0.5s;
+    animation-name: backdrop-transiton;
+    animation: backdrop-transiton cubic-bezier(0.4, 0, 0.2, 1) 500ms;
+
+}
+
+.modal {
+    position: absolute;
+    width: 768px;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: all 0.6s ease-in;
+    -moz-transition: all 0.6s ease-in;
+    transition: all 0.6s ease-in;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms, scale 250ms;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes backdrop-transiton {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+;
