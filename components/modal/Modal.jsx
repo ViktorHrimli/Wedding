@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import styles from "./Modal.module.scss";
-import { useEffect, useState } from "react";
+import Form from "../Form/Form";
 
 const Modal = ({ toggle }) => {
   const handleClickClose = (event) => {
@@ -26,12 +27,12 @@ const Modal = ({ toggle }) => {
   return (
     <div className={styles.backdrop} onClick={handleClickClose}>
       <div className={styles.modal}>
-        <form>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <button type="submit">Отпрвить</button>
-        </form>
+        <div className={styles.conteiner}>
+          <p>
+            Пожалуйста укажите свои данные, чтобы мы могли связаться с Вами.
+          </p>
+          <Form />
+        </div>
       </div>
     </div>
   );

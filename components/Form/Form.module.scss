@@ -1,0 +1,93 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 280px;
+    grid-gap: 24px;
+
+
+
+
+
+    @media screen and (min-width: 768px) {
+        min-width: 400px;
+        align-items: center;
+    }
+
+    label {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        grid-gap: 10px;
+    }
+
+    input {
+        min-width: 90%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #7B80CF;
+
+        @media screen and (min-width: 450px) {
+            min-width: 250px;
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 600px;
+        }
+
+
+        &::placeholder {
+            font-size: 12px;
+            line-height: 120%;
+            color: rgb(58, 71, 86, 0.7);
+        }
+
+        &:hover::placeholder {
+            color: transparent;
+        }
+    }
+
+    button {
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        max-width: 212px;
+        padding: 12px;
+
+        outline: none;
+        border: none;
+
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background-color: rgba(123, 128, 207, 0.6);
+        transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        color: #3A4756;
+
+        &:disabled {
+            background-color: #01070e;
+
+
+        }
+
+        &:hover:disabled {
+
+            background-color: #01070e;
+
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(123, 128, 207, 0.3);
+
+        }
+    }
+
+
+}
