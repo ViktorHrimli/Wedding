@@ -1,56 +1,114 @@
+import { useEffect, useState } from "react";
 import styles from "./Heart.module.scss";
 import Image from "next/image";
+import path from "../../../pathImg";
 
 const Heart = ({ click }) => {
+  const [mediaQuery, setMediaQuery] = useState(0);
+
+  useEffect(() => {
+    const windowWidth = (e) => setMediaQuery(e.target.innerWidth);
+
+    window.addEventListener("resize", windowWidth);
+    return () => {
+      window.removeEventListener("resize", windowWidth);
+    };
+  }, []);
+
   return (
     <div className={styles.conteiner}>
       <div className={styles.first_row}>
-        <div className={styles.first_row_left}>
-          <Image
-            onClick={click}
-            src="/2_left.jpg"
-            name="watawt"
-            width={36}
-            height={36}
-            alt="merried"
-          />
-          <Image
-            onClick={click}
-            src="/5_left.jpg"
-            width={36}
-            height={36}
-            alt="merried"
-          />
-        </div>
-        <div className={styles.first_row_right}>
-          <Image src="/5_right.jpg" width={36} height={36} alt="merried" />
-          <Image src="/2_right.jpg" width={36} height={36} alt="merried" />
-        </div>
+        <ul className={styles.first_row_left}>
+          {path.firstRowLeft &&
+            path.firstRowLeft.map(({ path, id }) => (
+              <li key={id}>
+                <Image
+                  onClick={click}
+                  src={path}
+                  name={path}
+                  width={mediaQuery > 768 ? 64 : 36}
+                  height={mediaQuery > 768 ? 64 : 36}
+                  alt="merried"
+                />
+              </li>
+            ))}
+        </ul>
+        <ul className={styles.first_row_right}>
+          {path.firstRowRight &&
+            path.firstRowRight.map(({ path, id }) => (
+              <li key={id}>
+                <Image
+                  onClick={click}
+                  src={path}
+                  name={path}
+                  width={mediaQuery > 768 ? 64 : 36}
+                  height={mediaQuery > 768 ? 64 : 36}
+                  alt="merried"
+                />
+              </li>
+            ))}
+        </ul>
       </div>
-      <div className={styles.second_row}>
-        <Image src="/1_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/3_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/6_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/1_center.jpg" width={36} height={36} alt="merried" />
-        <Image src="/6_right.jpg" width={36} height={36} alt="merried" />
-        <Image src="/3_right.jpg" width={36} height={36} alt="merried" />
-        <Image src="/1_right.jpg" width={36} height={36} alt="merried" />
-      </div>
-      <div className={styles.third_row}>
-        <Image src="/4_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/7_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/2_center.jpg" width={36} height={36} alt="merried" />
-        <Image src="/4_right.jpg" width={36} height={36} alt="merried" />
-        <Image src="/7_right.jpg" width={36} height={36} alt="merried" />
-      </div>
-      <div className={styles.four_row}>
-        <Image src="/8_left.jpg" width={36} height={36} alt="merried" />
-        <Image src="/3_center.jpg" width={36} height={36} alt="merried" />
-        <Image src="/8_right.jpg" width={36} height={36} alt="merried" />
-      </div>
-      <div className={styles.four_row}>
-        <Image src="/4_center.jpg" width={36} height={36} alt="merried" />
-      </div>
+      <ul className={styles.second_row}>
+        {path.secondRow &&
+          path.secondRow.map(({ id, path }) => (
+            <li key={id}>
+              <Image
+                onClick={click}
+                src={path}
+                name="watawt"
+                width={mediaQuery > 768 ? 64 : 36}
+                height={mediaQuery > 768 ? 64 : 36}
+                alt="merried"
+              />
+            </li>
+          ))}
+      </ul>
+      <ul className={styles.third_row}>
+        {path.thirdRow &&
+          path.thirdRow.map(({ id, path }) => (
+            <li key={id}>
+              <Image
+                onClick={click}
+                src={path}
+                name={path}
+                width={mediaQuery > 768 ? 64 : 36}
+                height={mediaQuery > 768 ? 64 : 36}
+                alt="merried"
+              />
+            </li>
+          ))}
+      </ul>
+      <ul className={styles.four_row}>
+        {path.fourRow &&
+          path.fourRow.map(({ id, path }) => (
+            <li key={id}>
+              <Image
+                onClick={click}
+                src={path}
+                name={path}
+                width={mediaQuery > 768 ? 64 : 36}
+                height={mediaQuery > 768 ? 64 : 36}
+                alt="merried"
+              />
+            </li>
+          ))}
+      </ul>
+      <ul className={styles.four_row}>
+        {path.fiveRow &&
+          path.fiveRow.map(({ id, path }) => (
+            <li key={id}>
+              <Image
+                onClick={click}
+                src={path}
+                name="watawt"
+                width={mediaQuery > 768 ? 64 : 36}
+                height={mediaQuery > 768 ? 64 : 36}
+                alt="merried"
+              />
+            </li>
+          ))}
+      </ul>
     </div>
   );
 };
