@@ -86,7 +86,7 @@
         left: 28px;
         width: 380px;
         height: 350px;
-        background-color: rgb(245, 222, 179, 0.36);
+        background-image: url(../../public/desktopImg.jpg);
         border-radius: 50%;
 
         &::after {
@@ -111,11 +111,10 @@
     height: 121px;
     top: 36px;
     right: 12px;
-    // background-image: url(../../img/girls_tab.jpg);
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    background-color: rgb(245, 222, 179, 0.36);
+    background-image: url(../../img/girls_tab.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
 
     @media screen and (max-width:767px) {
@@ -138,11 +137,9 @@
     height: 92px;
     top: 0px;
     right: 205px;
-    // background-image: url(../../img/girs_tab2.jpg);
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    background-color: rgb(245, 222, 179, 0.36);
+    background-image: url(../../img/girs_tab2.jpg);
+    background-position: 50% 21%;
+    background-repeat: no-repeat;
     border-radius: 50%;
 
     @media screen and (min-width: 1600px) {
@@ -160,11 +157,10 @@
     height: 203px;
     top: -170px;
     right: 387px;
-    // background-image: url(../../img/tab_girs3.jpg);
-    // background-position: center;
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    background-color: rgb(245, 222, 179, 0.36);
+    background-image: url(../../img/tab_girs3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
 
     @media screen and (min-width: 1600px) {

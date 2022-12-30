@@ -71,14 +71,14 @@
         color: #3A4756;
 
         &:disabled {
-            background-color: #01070e;
+            background-color: rgba(123, 128, 207, 0.9);
 
 
         }
 
         &:hover:disabled {
 
-            background-color: #01070e;
+            background-color: rgba(123, 128, 207, 0.6);
 
         }
 

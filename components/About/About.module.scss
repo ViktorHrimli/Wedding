@@ -2,7 +2,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-width: 320px;
+
 
     @media screen and (min-width: 768px) {
         min-width: 624px;
@@ -16,28 +18,25 @@
 }
 
 .about_wrapper {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 265px;
     height: 130px;
     margin-left: auto;
-    border-bottom-left-radius: 74%;
-    border-bottom-right-radius: 100%;
-    border-top-left-radius: 7%;
-    border-top-right-radius: 0%;
-    background-image: url(../../public/eclip_mob.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    border-radius: 14% 83% 36% 64% / 19% 0% 100% 81%;
     margin-right: 0px;
-
+    background: #D5E9F4;
     overflow: hidden;
-
 
     @media screen and (min-width: 768px) {
         width: 408px;
         height: 191px;
-        background-image: url(../../public/eclip_mob.jpg);
 
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 654px;
+        height: 290px;
     }
 }
 
@@ -50,7 +49,12 @@
     @media screen and (min-width: 768px) {
         font-size: 36px;
         margin-top: 10px;
+    }
 
+    @media screen and (min-width: 1600px) {
+        font-size: 48px;
+        margin-top: 30px;
+        margin-left: 40px;
     }
 }
 
@@ -66,7 +70,12 @@
     @media screen and (min-width: 768px) {
         font-size: 24px;
         margin-left: 30px;
+    }
 
+    @media screen and (min-width: 1600px) {
+        font-size: 36px;
+        margin-top: 60px;
+        margin-left: 110px;
     }
 }
 
@@ -75,19 +84,17 @@
     position: relative;
     display: block;
     margin-top: 22px;
-    margin-right: 44px;
-
-    @media screen and (max-width: 480px) {
-        margin-right: 0px;
-
-    }
-
     background-image: url(../../public/eclipBig_mob.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     width: 307px;
     height: 201px;
+
+    @media screen and (min-width: 480px) {
+        margin-right: 14px;
+    }
+
 
     @media screen and (min-width: 768px) {
         background-image: url(../../public/eclipBig_tab.jpg);
@@ -96,6 +103,15 @@
         margin-left: 24px;
         width: 481px;
         height: 306px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        background-image: url(../../public/eclipBig_deskt.jpg);
+        margin-top: 12px;
+        margin-right: auto;
+        margin-left: 24px;
+        width: 680px;
+        height: 390px;
     }
 }
 
@@ -117,5 +133,13 @@
         height: 42px;
         width: 66px;
         transform: rotate(66deg);
+    }
+
+    @media screen and (min-width: 1600px) {
+        bottom: 50px;
+        left: 52px;
+        height: 42px;
+        width: 66px;
+        transform: rotate(129deg);
     }
 }
