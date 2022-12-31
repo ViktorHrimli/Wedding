@@ -10,6 +10,16 @@
 
 .conteiner>ul>li>img {
     border-radius: 8px;
+
+    @media screen and (min-width: 320px) {
+        height: 34px;
+        width: 34px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 64px;
+        width: 64px;
+    }
 }
 
 .first_row {
@@ -18,11 +28,20 @@
     justify-content: center;
     grid-gap: 59px;
     margin-bottom: 12px;
-
 }
 
 .first_row ul li img {
     border-radius: 8px;
+
+    @media screen and (min-width: 320px) {
+        height: 34px;
+        width: 34px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 64px;
+        width: 64px;
+    }
 }
 
 .first_row_left {

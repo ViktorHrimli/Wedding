@@ -4,26 +4,6 @@ import Image from "next/image";
 import path from "../../../pathImg";
 
 const Heart = ({ click }) => {
-  const [mediaQuery, setMediaQuery] = useState(0);
-
-  useEffect(() => {
-    const windowWidth = (e) => setMediaQuery(e.currentTarget.innerWidth);
-
-    window.addEventListener("resize", windowWidth);
-    return () => {
-      window.removeEventListener("resize", windowWidth);
-    };
-  });
-
-  useEffect(() => {
-    const windowWidth = (e) => setMediaQuery(e.currentTarget.innerWidth);
-
-    window.addEventListener("loadstart", windowWidth);
-    return () => {
-      window.removeEventListener("loadstart", windowWidth);
-    };
-  });
-
   return (
     <div className={styles.conteiner}>
       <div className={styles.first_row}>
@@ -35,8 +15,8 @@ const Heart = ({ click }) => {
                   onClick={click}
                   src={path}
                   name={path}
-                  width={mediaQuery > 768 ? 64 : 36}
-                  height={mediaQuery > 768 ? 64 : 36}
+                  width={36}
+                  height={36}
                   alt="merried"
                 />
               </li>
@@ -50,8 +30,8 @@ const Heart = ({ click }) => {
                   onClick={click}
                   src={path}
                   name={path}
-                  width={mediaQuery > 768 ? 64 : 36}
-                  height={mediaQuery > 768 ? 64 : 36}
+                  width={36}
+                  height={36}
                   alt="merried"
                 />
               </li>
@@ -66,8 +46,8 @@ const Heart = ({ click }) => {
                 onClick={click}
                 src={path}
                 name={path}
-                width={mediaQuery > 768 ? 64 : 36}
-                height={mediaQuery > 768 ? 64 : 36}
+                width={36}
+                height={36}
                 alt="merried"
               />
             </li>
@@ -81,8 +61,8 @@ const Heart = ({ click }) => {
                 onClick={click}
                 src={path}
                 name={path}
-                width={mediaQuery > 768 ? 64 : 36}
-                height={mediaQuery > 768 ? 64 : 36}
+                width={36}
+                height={36}
                 alt="merried"
               />
             </li>
@@ -96,8 +76,8 @@ const Heart = ({ click }) => {
                 onClick={click}
                 src={path}
                 name={path}
-                width={mediaQuery > 768 ? 64 : 36}
-                height={mediaQuery > 768 ? 64 : 36}
+                width={36}
+                height={36}
                 alt="merried"
               />
             </li>
@@ -111,8 +91,8 @@ const Heart = ({ click }) => {
                 onClick={click}
                 src={path}
                 name={path}
-                width={mediaQuery > 768 ? 64 : 36}
-                height={mediaQuery > 768 ? 64 : 36}
+                width={36}
+                height={36}
                 alt="merried"
               />
             </li>
