@@ -3,6 +3,13 @@
     width: 100%;
     height: 100%;
     margin-bottom: 65px;
+
+
+
+}
+
+.conteiner>ul>li>img {
+    border-radius: 8px;
 }
 
 .first_row {
@@ -12,6 +19,10 @@
     grid-gap: 59px;
     margin-bottom: 12px;
 
+}
+
+.first_row ul li img {
+    border-radius: 8px;
 }
 
 .first_row_left {

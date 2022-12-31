@@ -29,12 +29,9 @@ const ModalImg = ({ toggle, imge }) => {
   return (
     <div className={styled.backdrop} onClick={handleClickCloseModal}>
       <div className={styled.modal}>
-        <Image
-          src={imge}
-          width={viewWidth > 768 ? 750 : viewWidth - 100}
-          height={500}
-          alt="merried"
-        />
+        <picture>
+          <img className={styled.img_modal} src={imge} alt="merried" />
+        </picture>
       </div>
     </div>
   );

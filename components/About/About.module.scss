@@ -84,7 +84,8 @@
     position: relative;
     display: block;
     margin-top: 22px;
-    background-image: url(../../public/eclipBig_mob.jpg);
+    background-image: url(../../public/vasily-koloda-Q3DZ_nKdMBg-unsplash.jpg);
+    border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -97,7 +98,6 @@
 
 
     @media screen and (min-width: 768px) {
-        background-image: url(../../public/eclipBig_tab.jpg);
         margin-top: 12px;
         margin-right: auto;
         margin-left: 24px;
@@ -106,7 +106,6 @@
     }
 
     @media screen and (min-width: 1600px) {
-        background-image: url(../../public/eclipBig_deskt.jpg);
         margin-top: 12px;
         margin-right: auto;
         margin-left: 24px;

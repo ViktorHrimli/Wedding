@@ -7,13 +7,22 @@ const Heart = ({ click }) => {
   const [mediaQuery, setMediaQuery] = useState(0);
 
   useEffect(() => {
-    const windowWidth = (e) => setMediaQuery(e.target.innerWidth);
+    const windowWidth = (e) => setMediaQuery(e.currentTarget.innerWidth);
 
     window.addEventListener("resize", windowWidth);
     return () => {
       window.removeEventListener("resize", windowWidth);
     };
-  }, []);
+  });
+
+  useEffect(() => {
+    const windowWidth = (e) => setMediaQuery(e.currentTarget.innerWidth);
+
+    window.addEventListener("loadstart", windowWidth);
+    return () => {
+      window.removeEventListener("loadstart", windowWidth);
+    };
+  });
 
   return (
     <div className={styles.conteiner}>
@@ -56,7 +65,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name="watawt"
+                name={path}
                 width={mediaQuery > 768 ? 64 : 36}
                 height={mediaQuery > 768 ? 64 : 36}
                 alt="merried"
@@ -101,7 +110,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name="watawt"
+                name={path}
                 width={mediaQuery > 768 ? 64 : 36}
                 height={mediaQuery > 768 ? 64 : 36}
                 alt="merried"
