@@ -12,14 +12,14 @@ import { useState } from "react";
 const Home = () => {
   const [isShow, setIsShow] = useState(false);
   const [isShowImg, setIsShowImg] = useState(false);
-  const [largeImg, setLargeImg] = useState(null);
+  const [idImg, setidImg] = useState(null);
 
   const handleClick = () => {
     setIsShow(true);
   };
 
   const handleClickImg = (e) => {
-    setLargeImg(e.target.name);
+    setidImg(e.target.name);
     setIsShowImg(true);
   };
   return (
@@ -29,7 +29,7 @@ const Home = () => {
       </Head>
       <div className={styles.wrapper_comp}>
         {isShow && <Modal toggle={setIsShow} />}
-        {isShowImg && <ModalImg toggle={setIsShowImg} imge={largeImg} />}
+        {isShowImg && <ModalImg toggle={setIsShowImg} id={idImg} />}
         <Hero click={handleClick} />
         <About />
         <Team />

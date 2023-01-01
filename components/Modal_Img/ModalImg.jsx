@@ -1,9 +1,20 @@
 import styled from "./ModalImg.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import paths from "../../pathImg";
 
-const ModalImg = ({ toggle, imge }) => {
-  const [viewWidth, setviewWidth] = useState(0);
+const arrImg = [
+  ...paths.firstRowLeft,
+  ...paths.firstRowRight,
+  ...paths.secondRow,
+  ...paths.thirdRow,
+  ...paths.fourRow,
+  ...paths.fiveRow,
+];
+
+const ModalImg = ({ toggle, id }) => {
+  const [idImg, setIdImg] = useState(null);
+  const [count, setCount] = useState(Number(id));
   const handleClickCloseModal = (event) => {
     if (event.target === event.currentTarget) {
       toggle(false);
@@ -16,22 +27,47 @@ const ModalImg = ({ toggle, imge }) => {
     }
   };
 
+  const sliderIdChange = (e) => {
+    switch (e.currentTarget.name) {
+      case "dicrement": {
+        return setCount((prev) => (prev -= 1));
+      }
+      case "increment": {
+        return setCount((prev) => (prev += 1));
+      }
+      default: {
+        return id;
+      }
+    }
+  };
+
   useEffect(() => {
-    const windowWidth = (e) => setviewWidth(e.target.innerWidth);
+    if (count === arrImg.length + 1) return setCount(1);
+    if (count === 0) return setCount(20);
+
+    const { path } = arrImg.find((item) => +item.id === count);
+    setIdImg(path);
+  }, [count]);
+
+  useEffect(() => {
     window.addEventListener("keydown", pressEscapeClose);
-    window.addEventListener("resize", windowWidth);
 
     return () => {
       window.removeEventListener("keydown", pressEscapeClose);
-      window.removeEventListener("resize", windowWidth);
     };
   });
   return (
     <div className={styled.backdrop} onClick={handleClickCloseModal}>
       <div className={styled.modal}>
+        <button type="button" onClick={sliderIdChange} name="dicrement">
+          prev
+        </button>
         <picture>
-          <img className={styled.img_modal} src={imge} alt="merried" />
+          <img className={styled.img_modal} src={idImg} alt="merried" />
         </picture>
+        <button type="button" onClick={sliderIdChange} name="increment">
+          next
+        </button>
       </div>
     </div>
   );

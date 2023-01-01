@@ -14,7 +14,7 @@ const Heart = ({ click }) => {
                 <Image
                   onClick={click}
                   src={path}
-                  name={path}
+                  name={id}
                   width={36}
                   height={36}
                   alt="merried"
@@ -29,7 +29,7 @@ const Heart = ({ click }) => {
                 <Image
                   onClick={click}
                   src={path}
-                  name={path}
+                  name={id}
                   width={36}
                   height={36}
                   alt="merried"
@@ -45,7 +45,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name={path}
+                name={id}
                 width={36}
                 height={36}
                 alt="merried"
@@ -60,7 +60,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name={path}
+                name={id}
                 width={36}
                 height={36}
                 alt="merried"
@@ -75,7 +75,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name={path}
+                name={id}
                 width={36}
                 height={36}
                 alt="merried"
@@ -90,7 +90,7 @@ const Heart = ({ click }) => {
               <Image
                 onClick={click}
                 src={path}
-                name={path}
+                name={id}
                 width={36}
                 height={36}
                 alt="merried"
