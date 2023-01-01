@@ -1,5 +1,5 @@
 import styled from "./ModalImg.module.scss";
-import Image from "next/image";
+import { BsFillFileArrowUpFill, BsFileArrowDownFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import paths from "../../pathImg";
 
@@ -59,14 +59,24 @@ const ModalImg = ({ toggle, id }) => {
   return (
     <div className={styled.backdrop} onClick={handleClickCloseModal}>
       <div className={styled.modal}>
-        <button type="button" onClick={sliderIdChange} name="dicrement">
-          prev
+        <button
+          className={styled.slide_prev}
+          type="button"
+          onClick={sliderIdChange}
+          name="dicrement"
+        >
+          <BsFillFileArrowUpFill className={styled.icons_prev} />
         </button>
         <picture>
           <img className={styled.img_modal} src={idImg} alt="merried" />
         </picture>
-        <button type="button" onClick={sliderIdChange} name="increment">
-          next
+        <button
+          className={styled.slide_next}
+          type="button"
+          onClick={sliderIdChange}
+          name="increment"
+        >
+          <BsFileArrowDownFill className={styled.icons_next} />
         </button>
       </div>
     </div>
